@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'application'
     id 'com.adarshr.test-logger' version '3.1.0'
 }
 
@@ -9,6 +10,15 @@ targetCompatibility = 17
 
 tasks.withType(JavaCompile).each {
     it.options.compilerArgs.add('--enable-preview')
+}
+
+ext {
+    javaMainClass = 'org.example.Main'
+}
+
+application {
+    mainClassName = javaMainClass
+    applicationDefaultJvmArgs = ['--enable-preview']
 }
 
 group 'org.example'

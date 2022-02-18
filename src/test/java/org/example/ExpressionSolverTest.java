@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.expressionsolver.ExpressionSolver;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -254,8 +255,7 @@ class ExpressionSolverTest {
         assertThatThrownBy(() -> expressionSolver.solve("e1) && e2 && (e3")).isInstanceOf(ParseException.class);
     }
 
-
-    interface Predicates {
+    private interface Predicates {
         boolean fn1();
         boolean fn2();
         boolean fn3();

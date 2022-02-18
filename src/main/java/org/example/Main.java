@@ -1,14 +1,5 @@
-# ExpressionSolver
+package org.example;
 
-This is a simple solver of logical expressions.
-
-Supported operators:
- - logical `||`, `&&`, `!`
- - grouping `(`, `)`
-
-### Example
-
-```java
 import org.example.expressionsolver.ExpressionSolver;
 
 import java.text.ParseException;
@@ -36,4 +27,3 @@ public class Main {
         System.out.println(String.format("Expression '%s' gives '%s'", expression, result));
     }
 }
-```
